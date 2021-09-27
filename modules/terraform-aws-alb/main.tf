@@ -1,5 +1,5 @@
 resource "aws_security_group" "alb" {
-  name        = "alb_security_group"
+  name        = "alb-security-group"
   description = "load balancer security group"
   vpc_id      = var.vpc_id
 
@@ -22,7 +22,7 @@ resource "aws_security_group" "alb" {
 }
 
 resource "aws_lb" "app" {
-  name               = ""
+  name               = "app-load-balancer"
   internal           = false
   load_balancer_type = "application"
   subnets            = var.subnets

@@ -21,7 +21,7 @@ resource "aws_key_pair" "generated_key" {
 }
 
 resource "aws_security_group" "sg" {
-  name        = "allow_ssh_http"
+  name        = "allow-ssh-http"
   description = "Allow ssh http inbound traffic"
   vpc_id      = var.vpc_id
 
@@ -50,7 +50,7 @@ resource "aws_security_group" "sg" {
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
   }
-  tags = merge({ Name = "web_instance" }, var.tags)
+  tags = merge({ Name = "web-instance" }, var.tags)
 }
 
 resource "aws_instance" "web" {
@@ -68,7 +68,7 @@ resource "aws_instance" "web" {
     sudo systemctl start httpd
   EOF
 
-  tags = merge({ Name = "web_instance" }, var.tags)
+  tags = merge({ Name = "web-instance" }, var.tags)
 }
 
 resource "aws_lb_target_group" "web" {

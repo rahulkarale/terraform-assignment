@@ -41,3 +41,8 @@ git clone https://github.com/rahulkarale/terraform-assignment.git
     ```sh
     terraform apply -auto-approve
     ```
+
+6. Destroy your infrastructure. It will destroy the all resources created
+    ```sh
+    terraform destroy -auto-approve
+    ```
