@@ -28,9 +28,9 @@ git clone https://github.com/rahulkarale/terraform-assignment.git
     secret_key = "my-secret-key"
    }
    ```
-3. Get Terraform Modules with below command.
+3. Initialize terraform with below command.
     ```sh
-    terraform get -update
+    terraform init
     ```
    
 4. Plan your infrastructure. It will show you infrastructure changes (create, modify or delete), it will going to make.
